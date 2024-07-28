@@ -1,5 +1,7 @@
 Relational Database with Transaction Support
+
 Project Overview
+
 This project implements a basic relational database with support for transactions and strict serializability. The database persists data to disk, ensuring data integrity even in the event of interruptions or crashes. The project includes features for creating tables, inserting data, managing transactions, and committing changes.
 
 Features
