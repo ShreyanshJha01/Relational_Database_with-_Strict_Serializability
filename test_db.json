@@ -1,0 +1,30 @@
+{
+    "Data": {
+        "columns": [
+            "Name",
+            "Age",
+            "ID",
+            "Role"
+        ],
+        "rows": [
+            {
+                "Name": "Ram",
+                "Age": "22",
+                "ID": "918",
+                "Role": "Software Developer"
+            },
+            {
+                "Name": "Shyam",
+                "Age": "23",
+                "ID": "921",
+                "Role": "Database Engineer"
+            },
+            {
+                "Name": "Anu",
+                "Age": "24",
+                "ID": "823",
+                "Role": "CA"
+            }
+        ]
+    }
+}
