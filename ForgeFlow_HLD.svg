@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#52657a"/></marker><style>
+.bg{fill:#f7f9fc}.box{fill:#fff;stroke:#64748b;stroke-width:2;rx:16}.blue{fill:#e8f1ff;stroke:#4776b8}.green{fill:#e8f7ef;stroke:#38865b}.orange{fill:#fff1df;stroke:#b77927}.purple{fill:#f2eaff;stroke:#8761b3}.title{font:700 28px Arial;fill:#142235}.h{font:700 19px Arial;fill:#142235}.t{font:16px Arial;fill:#263548}.s{font:14px Arial;fill:#46566b}.edge{stroke:#52657a;stroke-width:2.2;fill:none;marker-end:url(#a)}
+</style></defs>
+<rect class="bg" width="1400" height="900"/>
+<text x="700" y="45" text-anchor="middle" class="title">ForgeFlow — High-Level Architecture (HLD)</text>
+<rect x="470" y="75" width="460" height="76" class="box blue"/><text x="700" y="105" text-anchor="middle" class="h">User / Browser</text><text x="700" y="130" text-anchor="middle" class="t">Dashboard • project request • live progress</text>
+<path class="edge" d="M700 151 V190"/>
+<rect x="350" y="190" width="700" height="90" class="box blue"/><text x="700" y="223" text-anchor="middle" class="h">FastAPI Web Application · app/main.py</text><text x="700" y="249" text-anchor="middle" class="t">Auth/session • project/run APIs • downloads • preview controls</text>
+<path class="edge" d="M700 280 V325"/>
+<rect x="350" y="325" width="700" height="100" class="box purple"/><text x="700" y="359" text-anchor="middle" class="h">LangGraph Orchestrator · app/graph.py</text><text x="700" y="385" text-anchor="middle" class="t">Plan → Develop → Test → Validate → Checkpoint</text><text x="700" y="408" text-anchor="middle" class="s">Conditional edges: repair loop, stop on failure/cancel/budget</text>
+<path class="edge" d="M700 425 V458"/><path class="edge" d="M700 458 H220 V490"/><path class="edge" d="M700 458 V490"/><path class="edge" d="M700 458 H1180 V490"/>
+<rect x="55" y="490" width="330" height="112" class="box blue"/><text x="220" y="523" text-anchor="middle" class="h">Supervisor Agent</text><text x="220" y="550" text-anchor="middle" class="t">Plan + acceptance criteria</text><text x="220" y="575" text-anchor="middle" class="s">Final requirements/change review</text>
+<rect x="535" y="490" width="330" height="112" class="box green"/><text x="700" y="523" text-anchor="middle" class="h">Developer Agent</text><text x="700" y="550" text-anchor="middle" class="t">Read / write / edit / search files</text><text x="700" y="575" text-anchor="middle" class="s">LangChain tools + workspace guardrails</text>
+<rect x="1015" y="490" width="330" height="112" class="box orange"/><text x="1180" y="523" text-anchor="middle" class="h">Tester Agent</text><text x="1180" y="550" text-anchor="middle" class="t">Acceptance + regression tests</text><text x="1180" y="575" text-anchor="middle" class="s">Pytest / JUnit / browser checks</text>
+<path class="edge" d="M220 602 V635 H700 V662"/><path class="edge" d="M700 602 V662"/><path class="edge" d="M1180 602 V635 H700"/>
+<rect x="350" y="662" width="700" height="80" class="box orange"/><text x="700" y="693" text-anchor="middle" class="h">Guardrails + Execution Boundary</text><text x="700" y="719" text-anchor="middle" class="t">Path validation • command allowlist • isolated Docker runner • time/resource limits</text>
+<path class="edge" d="M520 742 V775 H250"/><path class="edge" d="M700 742 V775"/><path class="edge" d="M880 742 V775 H1150"/>
+<rect x="55" y="775" width="390" height="85" class="box blue"/><text x="250" y="808" text-anchor="middle" class="h">PostgreSQL</text><text x="250" y="834" text-anchor="middle" class="t">Users, projects, runs, events, tests, checkpoints</text>
+<rect x="505" y="775" width="390" height="85" class="box green"/><text x="700" y="808" text-anchor="middle" class="h">Project Workspace + Git</text><text x="700" y="834" text-anchor="middle" class="t">Generated source • diffs • branch • checkpoint</text>
+<rect x="955" y="775" width="390" height="85" class="box purple"/><text x="1150" y="808" text-anchor="middle" class="h">LLM Gateway + Preview</text><text x="1150" y="834" text-anchor="middle" class="t">Provider fallback/budgets • app process • HTTP health</text>
+</svg>
